@@ -14,12 +14,12 @@ const RecentProjects = (props: Props) => {
         <span className="text-purple">recent projects</span>
       </h1>
       <div className="flex flex-wrap items-center justify-center p-4  gap-x-24 gap-y-8 mt-10">
-        {projects.map(({ id, title, des, iconLists, img, link }) => (
+        {projects.map(({ id, title, des, iconLists, img, link, dis }) => (
           <div
             key={id}
             className="sm:h-[41rem] lg:min-h-[32.5rem] h-[32rem] flex items-center justify-center sm:w-[570px] w-[80vw] mb-10"
           >
-            <PinContainer title={link} href={link}>
+            <PinContainer title={link} href={link} dis={dis ?? ""}>
               <div className=" relative flex items-center justify-center sm:w-[570px] w-[80vw] sm:h-[40vh] h-[30vh] ">
                 <div className=" relative w-full h-full overflow-hidden lg:rounded-3xl bg-[#13162d]">
                   <img src="/bg.png" alt="bg-img" />
